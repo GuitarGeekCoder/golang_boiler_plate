@@ -1,0 +1,77 @@
+{{define "verifyEmailTemplate"}}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Email Verification</title>
+</head>
+
+<body style="background-color: #fff;padding: 20px;">
+    <div style="margin:0 auto; padding:0; width: 98%; display: flex; justify-content: center;">
+        <table
+            style="width:98%; height:auto; background-color:rgb(243, 243, 237); border-radius: 10px; border-spacing: 30px; box-shadow: 0px 0px 10px 0px rgba(68,68,68,0.75);">
+            <thead style="padding:20px; background-color: #051b34;">
+                <tr>
+                    <th style="border: 7px double #fff;">
+                        <!-- <img src="data:image/png;base64,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" alt="logo"/>  -->
+                        <img src="https://reak.in/reak_logo_white.png" width="25%" alt="logo" />
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        <h2 style="font-weight:600; color:#051b34; font-size: 18px; padding: 25px 50px;">Hello
+                            {{.email}},</h2>
+                        <p style="font-size: 16px; color: #000; line-height: 2em; padding:0 80px; text-align: justify;">
+                            You have registered an account {{.App_name}} Before being able to use your account, we just
+                            need to verify your email address.
+                        </p>
+                        <p
+                            style="font-size: 16px; color: #000; line-height: 2em; margin: 0px 80px; padding-top:10px; text-align: justify;">
+                            Please click on the following link to confirm email address.
+                        </p>
+                        <div style="text-align:center; margin:50px;">
+
+                            <a href="{{.App_url}}{{.link_to_verify_data}}" target="_blank"
+                                style="font-size:16px; color:#ebebeb; background-color: #051b34; padding:10px 15px; border:2px dotted #fff; text-decoration: none; cursor: pointer;">
+                                Please verify your Email
+                            </a>
+                        </div>
+                        <p style="font-size: 16px; color: #051b34; text-align: center; line-height: 0em;">
+                            <b>Or</b>
+                        </p>
+                        <code>
+                    <p style="font-size: 15px; text-align: center; line-height: 5em;">
+                        {{.App_url}}{{.link_to_verify_data}}
+                    </p>
+                </code>
+
+                        <p style="font-size: 16px; color: #444; text-align: center; line-height:2em;">
+                            <em>If you don't use above link,</em><br>
+                            <em>This verification link will expire within {{.change_seconds_to_mintue}} minutes.</em>
+                        </p>
+                        <h3
+                            style="font-weight:600; color:#051b34; font-size: 18px; padding: 10px 50px; line-height: 2em;">
+                            Regards,<br> Reak Infotech LLP</h3>
+
+                        <hr style="border:1px dotted #444; width:92%;">
+                        <h4
+                            style="font-size:16px; font-weight:500; color:#444; text-align:center; font-family: 'Courier New', Courier, monospace; padding:20px 0 0;">
+                            &copy; 2023 Reak | All Rights Reserved</h4>
+
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+</body>
+
+</html>
+
+{{end}}

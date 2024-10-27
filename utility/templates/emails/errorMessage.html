@@ -1,0 +1,48 @@
+{{define "errorMessage"}}
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Email Verification</title>
+</head>
+<body style="background-color: #fff;padding: 20px; font-family: 'Noto Sans';">
+  <div style="margin:0 auto; padding:0; width: 98%; display: flex; justify-content: center;"> 
+    <table style="width:98%; height:auto; background-color:rgb(236,236,241); border-radius: 10px; border-spacing: 30px; box-shadow: 0px 0px 10px 0px rgba(68,68,68,0.75);">
+        <thead style="padding:20px; background-color: #4F427A;">
+            <tr>
+                <th style="border: 7px double #fff;">
+                           <img src="https://reak.in/reak_logo_white.png" width="25%" alt="logo" />
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+            <td>
+                <h2 style="font-weight:600; color:#282828; font-size: 18px; padding: 25px 20px;"> Critical Error Message</h2>
+                <p style="font-size: 16px; color: #141414; line-height: 1em; padding:0 20px;">
+                     Path:- {{.currentFilePath}}  
+                </p>    
+                <p style="font-size: 16px; color: #141414; line-height: 1em; padding:0 20px; text-align: justify;">
+                    LineNumber :- {{.lineNumbers}}     
+                </p> 
+                <p style="font-size: 16px; color: #141414; line-height: 1em; padding:0 20px; text-align: justify;">
+                    ErrorMessage :- {{.errorMessage}}    
+                </p> 
+                 
+                     <h3 style="font-weight:600; color:#282828; font-size: 18px; padding: 10px 20px; line-height: 2em;">Regards,<br> Reak Infotech LLP</h3>
+                
+                <hr style="border:1px outset rgb(211, 211, 211); width:92%;">
+                <h4 style="font-size:16px; font-weight:500; color:#444; text-align:center; font-family: 'Courier New', Courier, monospace; padding:20px 0 0;">&copy; 2022 Magorwager | All Rights Reserved</h4>
+  
+            </td>            
+            </tr>
+        </tbody>
+    </table>
+  </div> 
+   
+</body>
+</html>
+
+
+
+{{end}}

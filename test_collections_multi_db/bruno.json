@@ -1,0 +1,9 @@
+{
+  "version": "1",
+  "name": "test_collections_multi_db",
+  "type": "collection",
+  "ignore": [
+    "node_modules",
+    ".git"
+  ]
+}

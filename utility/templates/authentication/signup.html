@@ -1,0 +1,21 @@
+{{define "signup"}}
+<html>
+
+<head>
+    <title>Signup</title>
+</head>
+
+<body>
+    <form id="signup" method="POST">
+        FirstName: <input type="text" name="firstName" required/> <br />
+        LastName: <input type="text" name="lastName" required/> <br />
+        Email : <input type="text" name="email" type="email" required/> <br />
+        Password : <input type="password" name="password" required/> <br />
+        Type : <select name="pets" id="pet-select" required>
+            <option value="user">user</option>
+            <option value="admin">admin</option>
+        </select>
+        <button type="submit">signup</button>
+    </form>
+    {{.}}
+    {{end}}
